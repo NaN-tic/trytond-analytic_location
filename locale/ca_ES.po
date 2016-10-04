@@ -57,7 +57,3 @@ msgstr "Usuari modificació"
 msgctxt "model:stock.location.company,name:"
 msgid "Stock Location by Company"
 msgstr "Ubicació per empresa"
-
-msgctxt "view:stock.location.company:"
-msgid "Configuration by company"
-msgstr "Configuració per empresa"
