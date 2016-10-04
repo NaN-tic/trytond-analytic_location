@@ -3,10 +3,24 @@
      copyright notices and license terms. -->
 <tryton>
     <data>
+        <!-- stock.location -->
         <record model="ir.ui.view" id="location_view_form">
             <field name="model">stock.location</field>
             <field name="inherit" ref="stock.location_view_form"/>
             <field name="name">location_form</field>
+        </record>
+
+        <!-- stock.location.company -->
+        <record model="ir.ui.view" id="location_company_view_form">
+            <field name="model">stock.location.company</field>
+            <field name="type">form</field>
+            <field name="name">location_company_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="location_company_view_list">
+            <field name="model">stock.location.company</field>
+            <field name="type">tree</field>
+            <field name="name">location_company_list</field>
         </record>
     </data>
 </tryton>

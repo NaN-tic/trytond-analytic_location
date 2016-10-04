@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <!-- The COPYRIGHT file at the top level of this repository contains the full
      copyright notices and license terms. -->
-<data>
-    <xpath expr="/form" position="inside">
-        <newline/>
-        <field name="companies" colspan="4"/>
-    </xpath>
-</data>
+<tree string="Configuration by company">
+    <field name="company"/>
+    <field name="location"/>
+    <field name="analytic_accounts"/>
+</tree>

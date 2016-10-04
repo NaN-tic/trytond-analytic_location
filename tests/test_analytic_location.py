@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 import unittest
@@ -7,8 +6,8 @@ from trytond.tests.test_tryton import ModuleTestCase
 
 
 class TestCase(ModuleTestCase):
-    'Test module'
-    module = 'analytic_account_warehouse'
+    'Test AnalyticLocation module'
+    module = 'analytic_location'
 
 
 def suite():

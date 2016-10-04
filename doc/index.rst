@@ -1,5 +1,8 @@
-Analytic Account Warehouse
-==========================
+Analytic Location
+=================
 
-Add analytic accounts field to warehouse to be used by other modules to fill
-document's analytic accounts based on selected warehouse.
+Add analytic accounts configuration by company to locations, to be used by
+other modules.
+
+It's not visible until other modules make it visible for specific location
+types.

@@ -1,6 +1,8 @@
-Contabilidad analítica por almacén
-==================================
+Contabilidad analítica por ubicación
+====================================
 
-Añade el campo de cuentas analíticas a los almacenes para que otros módulos lo
-usen para rellenar las cuentas analíticas de los documentos basado en el
-almacén seleccionado.
+Añade la configuración de cuentas analíticas por compañía en las ubicaciones
+para que otros módulos hagan uso.
+
+El campo no es visible hasta que otros módulos lo hacen visible para tipos
+específicos de ubicación.
