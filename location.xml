@@ -22,5 +22,16 @@
             <field name="type">tree</field>
             <field name="name">location_company_list</field>
         </record>
+
+        <record model="ir.rule.group" id="rule_group_company_location">
+            <field name="model" search="[('model', '=', 'stock.location.company')]"/>
+            <field name="global_p" eval="True"/>
+        </record>
+        <record model="ir.rule" id="rule_company_location1">
+            <field name="rule_group" ref="rule_group_company_location"/>
+            <field name="domain"
+                eval="[('company', 'child_of', [Eval('user', {}).get('company', -1)], 'parent')]"
+                pyson="1"/>
+        </record>
     </data>
 </tryton>
