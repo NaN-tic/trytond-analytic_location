@@ -1,7 +1,63 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "field:stock.location,analytic_accounts:"
+msgctxt "error:stock.location.company:"
+msgid "Some mandatory root account are missing on \"%(name)s\""
+msgstr "Faltan algunas cuentas analíticas obligatorias en \"%(name)s\"."
+
+msgctxt "error:stock.location.company:"
+msgid "The Company must to be unique per Location."
+msgstr "La empresa debe ser única por ubicación."
+
+msgctxt "field:stock.location,companies:"
+msgid "Configuration by company"
+msgstr "Configuración por empresa"
+
+msgctxt "field:stock.location.company,analytic_accounts:"
 msgid "Analytic Accounts"
 msgstr "Cuentas analíticas"
+
+msgctxt "field:stock.location.company,analytic_accounts_size:"
+msgid "Analytic Accounts Size"
+msgstr "Tamaño de cuentas analíticas"
+
+msgctxt "field:stock.location.company,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:stock.location.company,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:stock.location.company,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:stock.location.company,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:stock.location.company,location:"
+msgid "Location"
+msgstr "Ubicación"
+
+msgctxt "field:stock.location.company,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:stock.location.company,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:stock.location.company,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "model:stock.location.company,name:"
+msgid "Stock Location by Company"
+msgstr "Ubicación por empresa"
+
+msgctxt "view:stock.location.company:"
+msgid "Configuration by company"
+msgstr "Configuración por empresa"
