@@ -124,6 +124,10 @@ class LocationCompany(AnalyticMixin, ModelView):
                             & (entry.selection == selection_id))))
             location_handler.drop_column('analytic_accounts')
 
+    @staticmethod
+    def default_company():
+        return Transaction().context.get('company')
+
 
 class AnalyticAccountEntry:
     __metaclass__ = PoolMeta
