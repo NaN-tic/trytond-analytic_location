@@ -14,8 +14,7 @@ from trytond.modules.analytic_account import AnalyticMixin
 __all__ = ['Location', 'LocationCompany', 'AnalyticAccountEntry']
 
 
-class Location:
-    __metaclass__ = PoolMeta
+class Location(metaclass=PoolMeta):
     __name__ = 'stock.location'
     companies = fields.One2Many('stock.location.company', 'location',
         'Configuration by company')
@@ -128,8 +127,7 @@ class LocationCompany(AnalyticMixin, ModelSQL, ModelView):
         return Transaction().context.get('company')
 
 
-class AnalyticAccountEntry:
-    __metaclass__ = PoolMeta
+class AnalyticAccountEntry(metaclass=PoolMeta):
     __name__ = 'analytic.account.entry'
 
     @classmethod
