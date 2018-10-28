@@ -4,7 +4,7 @@ from sql.aggregate import Min
 from sql.conditionals import Coalesce
 
 from trytond import backend
-from trytond.model import ModelView, Unique, fields
+from trytond.model import ModelSQL, ModelView, Unique, fields
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval, If
 from trytond.transaction import Transaction
@@ -34,7 +34,7 @@ class Location:
         return []
 
 
-class LocationCompany(AnalyticMixin, ModelView):
+class LocationCompany(AnalyticMixin, ModelSQL, ModelView):
     '''Stock Location by Company'''
     __name__ = 'stock.location.company'
     location = fields.Many2One('stock.location', 'Location', required=True,
