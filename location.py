@@ -11,7 +11,6 @@ from trytond.transaction import Transaction
 
 from trytond.modules.analytic_account import AnalyticMixin
 
-
 __all__ = ['Location', 'LocationCompany', 'AnalyticAccountEntry']
 
 
@@ -144,7 +143,7 @@ class AnalyticAccountEntry:
         LocationCompany = pool.get('stock.location.company')
         company = super(AnalyticAccountEntry, self).on_change_with_company(
             name)
-        if isinstance(self.origin, LocationCompany):
+        if isinstance(self.origin, LocationCompany) and self.origin.company:
             company = self.origin.company.id
         return company
 
