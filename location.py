@@ -18,6 +18,9 @@ class Location(metaclass=PoolMeta):
     __name__ = 'stock.location'
     companies = fields.One2Many('stock.location.company', 'location',
         'Configuration by company')
+    analytic_accounts = fields.Function(fields.One2Many(
+            'analytic.account.entry', 'origin', 'Analytic Accounts'),
+        'get_analytic_accounts')
 
     @classmethod
     def __setup__(cls):
@@ -30,6 +33,13 @@ class Location(metaclass=PoolMeta):
     def enabled_location_types():
         # Extend it to show configuration by company in certain location types
         return []
+
+    def get_analytic_accounts(self, name):
+        User = Pool().get('res.user')
+        user = User(Transaction().user)
+        for location_company in self.companies:
+            if location_company.company == user.company:
+                return [x.id for x in location_company.analytic_accounts]
 
 
 class LocationCompany(AnalyticMixin, ModelSQL, ModelView):
