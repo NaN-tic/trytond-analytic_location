@@ -72,12 +72,11 @@ class LocationCompany(AnalyticMixin, ModelSQL, ModelView):
         AccountEntry = pool.get('analytic.account.entry')
         Company = pool.get('company.company')
         Location = pool.get('stock.location')
-        TableHandler = backend.get('TableHandler')
         cursor = Transaction().connection.cursor()
 
         super(LocationCompany, cls).__register__(module_name)
 
-        location_handler = TableHandler(Location, module_name)
+        location_handler = backend.TableHandler(Location, module_name)
         # Migration from 3.4 from analytic_account_warehouse and analytic_stock
         # modules: analytic accounting in stock.location changed to reference
         # field to new stock.location.company model
