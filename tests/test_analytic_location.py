@@ -3,9 +3,9 @@
 import unittest
 import trytond.tests.test_tryton
 from trytond.tests.test_tryton import ModuleTestCase
+from trytond.modules.company.tests import CompanyTestMixin
 
-
-class TestCase(ModuleTestCase):
+class TestCase(CompanyTestMixin, ModuleTestCase):
     'Test AnalyticLocation module'
     module = 'analytic_location'
 

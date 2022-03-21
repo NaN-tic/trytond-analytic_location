@@ -30,7 +30,9 @@
         </record>
         <record model="ir.rule" id="rule_company_location1">
             <field name="rule_group" ref="rule_group_company_location"/>
-            <field name="domain" eval="[('company', '=', Eval('user', {}).get('company', -1))]" pyson="1"/>
+            <field name="domain"
+                eval="[('company', 'in', Eval('companies', []))]"
+                pyson="1"/>
         </record>
     </data>
 </tryton>
