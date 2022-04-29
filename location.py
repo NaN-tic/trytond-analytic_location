@@ -27,7 +27,7 @@ class Location(metaclass=PoolMeta):
         super(Location, cls).__setup__()
         cls.companies.states['invisible'] = (
             ~Eval('type', '').in_(cls.enabled_location_types()))
-        cls.companies.depends.append('type')
+        cls.companies.depends.add('type')
 
     @staticmethod
     def enabled_location_types():
@@ -58,7 +58,7 @@ class LocationCompany(AnalyticMixin, ModelSQL, ModelView):
                     Eval('context', {}).get('company', -1),
                     Eval('company', -1))),
             ]
-        cls.analytic_accounts.depends.append('company')
+        cls.analytic_accounts.depends.add('company')
         t = cls.__table__()
         cls._sql_constraints = [
             ('company_uniq', Unique(t, t.location, t.company),
