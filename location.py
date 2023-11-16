@@ -54,7 +54,7 @@ class LocationCompany(AnalyticMixin, ModelSQL, ModelView):
     def __setup__(cls):
         super(LocationCompany, cls).__setup__()
         cls.analytic_accounts.domain = [
-            ('company', '=', If(~Eval('company', -1),
+            ('company', '=', If(~Eval('company'),
                     Eval('context', {}).get('company', -1),
                     Eval('company', -1))),
             ]
