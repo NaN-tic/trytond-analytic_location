@@ -25,7 +25,7 @@
 
         <record model="ir.rule.group" id="rule_group_company_location">
             <field name="name">Location Company Rule</field>
-            <field name="model" search="[('model', '=', 'stock.location.company')]"/>
+            <field name="model">stock.location.company</field>
             <field name="global_p" eval="True"/>
         </record>
         <record model="ir.rule" id="rule_company_location1">
