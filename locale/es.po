@@ -2,14 +2,6 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "error:stock.location.company:"
-msgid "Some mandatory root account are missing on \"%(name)s\""
-msgstr "Faltan algunas cuentas analíticas obligatorias en \"%(name)s\"."
-
-msgctxt "error:stock.location.company:"
-msgid "The Company must to be unique per Location."
-msgstr "La empresa debe ser única por ubicación."
-
 msgctxt "field:stock.location,companies:"
 msgid "Configuration by company"
 msgstr "Configuración por empresa"
