@@ -18,7 +18,7 @@ class Location(metaclass=PoolMeta):
     __name__ = 'stock.location'
     companies = fields.One2Many('stock.location.company', 'location',
         'Configuration by company')
-    analytic_accounts = fields.Function(fields.Many2Many(
+    analytic_accounts = fields.Function(fields.One2Many(
             'analytic.account.entry', 'origin', 'Analytic Accounts'),
         'get_analytic_accounts')
 
