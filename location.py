@@ -3,7 +3,6 @@
 from sql.aggregate import Min
 from sql.conditionals import Coalesce
 
-from trytond import backend
 from trytond.model import ModelSQL, ModelView, Unique, fields
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval, If
@@ -76,7 +75,7 @@ class LocationCompany(AnalyticMixin, ModelSQL, ModelView):
 
         super(LocationCompany, cls).__register__(module_name)
 
-        location_handler = backend.TableHandler(Location, module_name)
+        location_handler = Location.__table_handler__(module_name)
         # Migration from 3.4 from analytic_account_warehouse and analytic_stock
         # modules: analytic accounting in stock.location changed to reference
         # field to new stock.location.company model
