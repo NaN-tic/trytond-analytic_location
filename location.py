@@ -45,7 +45,9 @@ class LocationCompany(AnalyticMixin, ModelSQL, ModelView):
     '''Stock Location by Company'''
     __name__ = 'stock.location.company'
     location = fields.Many2One('stock.location', 'Location', required=True,
-        readonly=True, ondelete='CASCADE')
+        ondelete='CASCADE', states={
+            'editable': False,
+            })
     company = fields.Many2One('company.company', 'Company', required=True,
         ondelete='CASCADE')
 
